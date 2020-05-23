@@ -37,8 +37,10 @@ function removeItem(e) {
     }
 }
 function removeAllItems() {
-    while(taskList.firstChild) {
+    if(confirm('Are you sure?')) {
+        while(taskList.firstChild) {
         taskList.removeChild(taskList.firstChild);
+        }  
     }
 }
 function filterTasks(e) {
